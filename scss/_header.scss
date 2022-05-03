@@ -7,27 +7,63 @@ header {
   .container {
     height: 8.5rem;
     @include flex(row, wrap, center, space-between);
+    .logo:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      transition: 0.4s ease-in;
+    }
     nav {
+      column-gap: 4.8rem;
+      @include flex(row, wrap, center, space-between);
       .menu {
-        width: 3.6rem;
-        height: 1.6rem;
-        position: relative;
-        .m_hamburger {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 3.6rem;
-          height: 0.2rem;
-          background: $space_blue;
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 1.2rem;
-            left: 0;
+        display: none;
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      nav {
+        flex-direction: row-reverse;
+        .menu {
+          display: flex;
+          .m_hamburger {
             width: 3.6rem;
-            height: 0.2rem;
-            background: $space_blue;
+            height: 3.6rem;
+            position: relative;
+            transition: 0.4s linear;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 1rem;
+              left: 0;
+              width: 3.6rem;
+              height: 0.2rem;
+              background: $space_blue;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 2.6rem;
+              left: 0;
+              width: 3.6rem;
+              height: 0.2rem;
+              background: $space_blue;
+            }
+          }
+        }
+
+        &.active {
+          .menu .m_hamburger {
+            &::before {
+              top: 1.8rem;
+              transform: rotate(-135deg);
+              transition: 0.4s linear;
+            }
+            &::after {
+              top: 1.8rem;
+              transform: rotate(135deg);
+              transition: 0.4s linear;
+            }
           }
         }
       }
