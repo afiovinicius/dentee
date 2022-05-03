@@ -1,6 +1,5 @@
 header {
   width: 100%;
-  position: sticky;
   padding: 3.4rem 0rem;
   background: $light_ocean;
   border-bottom: 0.1rem solid $gray_200;
@@ -22,11 +21,24 @@ header {
         ul {
           @include flex(row, wrap, center, center);
           li {
+            position: relative;
             &:not(:last-child) {
               margin-right: 4.8rem;
             }
-            a {
-              color: $space_blue;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -0.2rem;
+              width: 0;
+              height: 0.2rem;
+              background: $ocean_blue;
+              transition: 0.4s ease-in;
+            }
+            &:hover {
+              &::after {
+                width: 100%;
+              }
             }
           }
         }
@@ -94,6 +106,15 @@ header {
               top: 10rem;
             }
           }
+          ul {
+            li {
+              &::after {
+                width: 4.8rem;
+                left: 50%;
+                transform: translate(-50%);
+              }
+            }
+          }
         }
 
         &.active {
@@ -113,6 +134,7 @@ header {
             display: block;
             top: 10rem;
             right: 2rem;
+            z-index: 10;
             ul {
               flex-direction: column;
               row-gap: 2.8rem;

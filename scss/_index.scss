@@ -78,6 +78,27 @@
       }
     }
   }
+  @include responsive(991px) {
+    .container {
+      .h_text {
+        margin-bottom: 13.5rem;
+        h1 {
+          width: 40rem;
+        }
+      }
+      .i_girl {
+        height: 42.6rem;
+        .card_right,
+        .card_left {
+          height: 6.8rem;
+          max-width: 20rem;
+        }
+        .card_right {
+          right: -3rem;
+        }
+      }
+    }
+  }
   @include responsive(768px) {
     .container {
       flex-wrap: wrap;
@@ -88,6 +109,17 @@
           width: 100%;
         }
       }
+      .i_girl {
+        height: 65.9rem;
+        .card_right,
+        .card_left {
+          height: 6.8rem;
+          max-width: 20rem;
+        }
+        .card_right {
+          right: 0;
+        }
+      }
     }
   }
 
@@ -95,11 +127,6 @@
     .container {
       .i_girl {
         height: 46rem;
-        .card_right,
-        .card_left {
-          height: 6rem;
-          max-width: 18rem;
-        }
       }
     }
   }
