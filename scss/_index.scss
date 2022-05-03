@@ -74,6 +74,7 @@
         left: 0;
         bottom: 0;
         max-width: 53.4rem;
+        height: 100%;
       }
     }
   }
@@ -89,18 +90,16 @@
       }
     }
   }
+
   @include responsive(480px) {
-    padding-top: 7.2rem;
     .container {
       .i_girl {
-        height: 46.8rem;
-      }
-    }
-  }
-  @include responsive(375px) {
-    .container {
-      .i_girl {
-        height: 41.4rem;
+        height: 46rem;
+        .card_right,
+        .card_left {
+          height: 6rem;
+          max-width: 18rem;
+        }
       }
     }
   }
