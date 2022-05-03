@@ -1,1 +1,51 @@
- 
+// Buttons
+.btn {
+  overflow: hidden;
+  padding: 0.9rem 2.4rem;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 160%;
+  cursor: pointer;
+  column-gap: 1.2rem;
+  @include flex(row, nowrap, center, center);
+  transition: 0.4s ease-out;
+  position: relative;
+}
+
+.b_solid {
+  color: $light;
+  background: $ocean_blue;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 101%;
+    top: 0;
+    left: 0;
+    transition: 0.4s linear;
+  }
+  &:hover {
+    z-index: 1;
+    &::after {
+      width: 101%;
+      z-index: -1;
+      background: $gradient_blue;
+      box-shadow: 0rem 0.2rem 0.6rem rgba(224, 234, 255, 0.16);
+    }
+  }
+}
+
+.b_outline {
+  color: $space_blue;
+  border: 0.1rem solid $gray_400;
+  &:hover {
+    background: rgba(224, 234, 255, 0.3);
+  }
+}
+
+button:hover {
+  img {
+    transform: translateX(0.5rem);
+  }
+}

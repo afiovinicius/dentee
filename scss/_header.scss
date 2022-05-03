@@ -1,1 +1,36 @@
- 
+header {
+  width: 100%;
+  position: sticky;
+  padding: 3.4rem 0rem;
+  background: $light_ocean;
+  border-bottom: 0.1rem solid $gray_200;
+  .container {
+    height: 8.5rem;
+    @include flex(row, wrap, center, space-between);
+    nav {
+      .menu {
+        width: 3.6rem;
+        height: 1.6rem;
+        position: relative;
+        .m_hamburger {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3.6rem;
+          height: 0.2rem;
+          background: $space_blue;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 1.2rem;
+            left: 0;
+            width: 3.6rem;
+            height: 0.2rem;
+            background: $space_blue;
+          }
+        }
+      }
+    }
+  }
+}

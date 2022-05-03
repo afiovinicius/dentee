@@ -1,1 +1,164 @@
+/* Índice 
  
+  1 - Mixins
+  2 - Colors
+  2.1 - Brand
+  2.2 - Patterns Mode
+  2.3 - Grayscale
+  2.4 - Gradient
+  3 - Heading
+  3.1 - Text Body
+  4 - Responsive
+  5 - Logo Size
+  5.1 - Icon Size
+ 
+ */
+
+// 1 - Mixins
+@mixin responsive($maxwidth) {
+  @media (max-width: $maxwidth) {
+    @content;
+  }
+}
+
+@mixin flex($direction, $wrap, $align, $justify) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// 2 - Colors
+// 2.1 - Brand
+$space_blue: hsla(221, 82%, 17%, 1);
+$ocean_blue: hsla(221, 74%, 43%, 1);
+// 2.2 - Patterns Mode
+$light: hsla(0, 0%, 100%, 1);
+$light_space: hsla(221, 100%, 94%, 1);
+$light_ocean: hsla(221, 100%, 98%, 1);
+$dark: hsla(0, 0%, 8%, 1);
+$dark_space: hsla(222, 20%, 17%, 1);
+$dark_ocean: hsla(222, 20%, 34%, 1);
+// 2.3 - Grayscale
+$gray_500: hsla(222, 12%, 54%, 1);
+$gray_400: hsla(221, 17%, 76%, 1);
+$gray_300: hsla(222, 28%, 90%, 1);
+$gray_200: hsla(222, 32%, 94%, 1);
+$gray_100: hsla(222, 66%, 97%, 1);
+// 2.4 - Gradient
+$gradient_blue: linear-gradient(90.39deg, #081d4d -2.62%, #1d50bf 102.35%);
+
+// 3 - Heading
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 125%;
+  @include responsive(991px) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 125%;
+  @include responsive(991px) {
+    font-size: 3.2rem;
+    line-height: 132%;
+  }
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 132%;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 142%;
+}
+
+h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 156%;
+}
+
+// 3.1 - Text Body
+.t_body_lg,
+.t_body_md,
+label,
+.t_body_sm,
+.t_body_xs,
+a,
+li,
+span {
+  line-height: 160%;
+}
+
+p.t_body_lg {
+  font-size: 1.8rem;
+}
+
+label,
+p.t_body_md {
+  font-size: 1.6rem;
+}
+
+p.t_body_sm {
+  font-size: 14px;
+}
+
+p.t_body_xs {
+  font-size: 12px;
+}
+
+a,
+li,
+span {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+// 4 - Responsive
+.container {
+  width: 100%;
+  max-width: 116.8rem;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+  @include responsive(991px) {
+    max-width: 73.6rem;
+  }
+  @include responsive(480px) {
+    max-width: 42rem;
+  }
+}
+
+// 5 - Logo Size
+.logo.lg {
+  max-width: 19.2rem;
+}
+
+.logo.md {
+  max-width: 14.8rem;
+}
+
+.logo.sm {
+  max-width: 10.4rem;
+}
+
+// 5.1 - Icon Size
+.i-md {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.i-sm {
+  width: 2.4rem;
+  height: 2.4rem;
+}

@@ -1,1 +1,81 @@
- 
+/* Índice 
+
+  1 - Hero
+  2 - Specialties
+  3 - About
+  4 - Information
+  5 - Professional
+  6 - Depoiment
+  7 - Contact
+
+*/
+
+// 1 - Hero
+.hero {
+  height: 74.6rem;
+  background: $light_ocean;
+  padding-top: 9rem;
+  .container {
+    @include flex(row, nowrap, flex-end, space-between);
+    .h_text {
+      max-width: 48rem;
+      margin-bottom: 25.8rem;
+      .tag {
+        color: $ocean_blue;
+        margin-left: 2.4rem;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0.7rem;
+          left: -2.4rem;
+          width: 1.2rem;
+          height: 1.2rem;
+          background: #0fe917;
+          border-radius: 50%;
+        }
+      }
+      h1 {
+        color: $space_blue;
+        width: 48rem;
+      }
+      .t_body_lg {
+        color: $dark_ocean;
+        margin-top: 1.6rem;
+      }
+      .b_solid {
+        max-width: 25.4rem;
+        margin-top: 3.2rem;
+      }
+    }
+    .i_girl {
+      width: 100%;
+      max-width: 56.8rem;
+      height: 65.9rem;
+      position: relative;
+      .card_right,
+      .card_left {
+        max-width: 26.6rem;
+        height: 9rem;
+        z-index: 1;
+        box-shadow: 0px 6.93059px 29.7025px -5.94051px rgba(22, 40, 80, 0.08);
+      }
+      .card_right {
+        position: absolute;
+        right: 0%;
+        bottom: 13.83%;
+      }
+      .card_left {
+        position: absolute;
+        left: 0%;
+        bottom: 30.08%;
+      }
+      .photo_girl {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 53.4rem;
+      }
+    }
+  }
+}
