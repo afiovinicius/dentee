@@ -90,6 +90,14 @@
     }
   }
   @include responsive(480px) {
+    padding-top: 7.2rem;
+    .container {
+      .i_girl {
+        height: 46.8rem;
+      }
+    }
+  }
+  @include responsive(375px) {
     .container {
       .i_girl {
         height: 41.4rem;
