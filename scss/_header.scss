@@ -13,16 +13,40 @@ header {
       transition: 0.4s ease-in;
     }
     nav {
-      column-gap: 4.8rem;
-      @include flex(row, wrap, center, space-between);
+      @include flex(row, wrap, center, center);
       .menu {
         display: none;
+      }
+      ._nav {
+        margin-right: 20rem;
+        ul {
+          @include flex(row, wrap, center, center);
+          li {
+            &:not(:last-child) {
+              margin-right: 4.8rem;
+            }
+            a {
+              color: $space_blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(1024px) {
+    .container {
+      nav {
+        ._nav {
+          margin-right: 10rem;
+        }
       }
     }
   }
   @include responsive(991px) {
     .container {
+      position: relative;
       nav {
+        column-gap: 4.8rem;
         flex-direction: row-reverse;
         .menu {
           display: flex;
@@ -52,6 +76,26 @@ header {
           }
         }
 
+        ._nav {
+          display: none;
+          background: $light_space;
+          margin: 0;
+          padding: 4.8rem;
+          position: absolute;
+          border-radius: 0.8rem;
+          animation: m_open 0.6s ease-in;
+          box-shadow: 0rem 0.4rem 0.8rem rgba(124, 133, 153, 0.16);
+          // animations
+          @keyframes m_open {
+            from {
+              top: 9rem;
+            }
+            to {
+              top: 10rem;
+            }
+          }
+        }
+
         &.active {
           .menu .m_hamburger {
             &::before {
@@ -65,13 +109,27 @@ header {
               transition: 0.4s linear;
             }
           }
+          ._nav {
+            display: block;
+            top: 10rem;
+            right: 2rem;
+            ul {
+              flex-direction: column;
+              row-gap: 2.8rem;
+              li {
+                &:not(:last-child) {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
   @include responsive(768px) {
     .container {
-      ._nav {
+      nav {
         .b_outline {
           display: none;
         }
