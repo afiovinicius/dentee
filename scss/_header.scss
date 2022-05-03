@@ -75,6 +75,7 @@ header {
               width: 3.6rem;
               height: 0.2rem;
               background: $space_blue;
+              transition: 0.4s linear;
             }
             &::after {
               content: "";
@@ -84,6 +85,7 @@ header {
               width: 3.6rem;
               height: 0.2rem;
               background: $space_blue;
+              transition: 0.4s linear;
             }
           }
         }
