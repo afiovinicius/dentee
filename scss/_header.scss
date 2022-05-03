@@ -69,4 +69,13 @@ header {
       }
     }
   }
+  @include responsive(768px) {
+    .container {
+      ._nav {
+        .b_outline {
+          display: none;
+        }
+      }
+    }
+  }
 }

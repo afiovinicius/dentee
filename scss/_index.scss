@@ -12,7 +12,6 @@
 
 // 1 - Hero
 .hero {
-  height: 74.6rem;
   background: $light_ocean;
   padding-top: 9rem;
   .container {
@@ -75,6 +74,25 @@
         left: 0;
         bottom: 0;
         max-width: 53.4rem;
+      }
+    }
+  }
+  @include responsive(768px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+      .h_text {
+        margin-bottom: 3.2rem;
+        h1 {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    .container {
+      .i_girl {
+        height: 41.4rem;
       }
     }
   }
