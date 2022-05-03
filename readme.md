@@ -8,9 +8,9 @@
 
 ## UI Design
 
-<p>UI Design desenvolvido por Victor Boens</p>
+##<p>UI Design desenvolvido por Victor Boens</p>
 
-[Linkedin - Victor Boens](https://www.linkedin.com/in/victor-boens/)</br></br>
+[Linkedin - Victor Boens](https://www.linkedin.com/in/victor-boens/)</br>
 [Behance](https://www.behance.net/gallery/141845305/Clinica-Dentee-Interface-do-Usuario)
 
 ## Front-End
