@@ -1,1 +1,84 @@
- 
+footer {
+  margin-top: 10rem;
+  padding: 10rem 0rem 3.4rem;
+  background: $light_ocean;
+  main {
+    @include flex(row, wrap, flex-start, space-between);
+    gap: 3.2rem 12rem;
+    .f_logo {
+      width: 26.4rem;
+      .logo {
+        margin-bottom: 1.6rem;
+      }
+    }
+    .f_links {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+        a {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.4rem;
+            width: 0;
+            height: 0.2rem;
+            background: $gray_400;
+            transition: 0.4s ease-in;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .f_contact {
+      .contact_infor {
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+    .f_sm {
+      display: flex;
+      .icon {
+        &:hover {
+          transition: 0.4s ease-in-out;
+          transform: translateY(-0.5rem);
+        }
+        &:not(:last-child) {
+          margin-right: 1.6rem;
+        }
+      }
+    }
+  }
+  @include responsive(1024px) {
+    main {
+      .f_logo {
+        width: 36rem;
+        margin-right: 50rem;
+      }
+    }
+  }
+  @include responsive(991px) {
+    main {
+      gap: 5.6rem;
+      .f_logo {
+        margin-right: 20rem;
+      }
+    }
+  }
+  @include responsive(480px) {
+    main {
+      gap: 6.4rem 8rem;
+      .f_logo {
+        width: 27.9rem;
+        margin-right: 0;
+      }
+    }
+  }
+}

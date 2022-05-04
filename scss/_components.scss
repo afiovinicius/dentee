@@ -108,15 +108,16 @@ button:hover {
   @include flex(column, wrap, flex-start, center);
   .p_photo {
     width: 100%;
-    height: 35.2rem;
     border-radius: 0.8rem;
     position: relative;
-
+    img {
+      height: 35.2rem;
+    }
     &::before {
       content: "";
       position: absolute;
-      top: 0;
       left: 0;
+      bottom: 0;
       z-index: 5;
       width: 100%;
       height: 100%;
@@ -136,14 +137,22 @@ button:hover {
   }
   @include responsive(991px) {
     max-width: 17.8rem;
-    .p_photo {
+    .p_photo img {
       height: 22.4rem;
     }
   }
   @include responsive(414px) {
     max-width: 100%;
-    .p_photo {
+    .p_photo img {
       height: 34rem;
     }
+  }
+}
+
+// Contact Infor
+.contact_infor {
+  display: flex;
+  .t_body_md {
+    margin-left: 1.2rem;
   }
 }
