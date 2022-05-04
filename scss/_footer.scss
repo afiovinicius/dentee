@@ -63,6 +63,7 @@ footer {
     .container {
       @include flex(row, wrap, center, space-between);
       .scroll_top {
+        background: none;
         transition: all 0.4s linear;
         @include flex(row, nowrap, center, center);
         column-gap: 1.6rem;
@@ -97,6 +98,7 @@ footer {
         }
         &:hover {
           color: $dark_ocean;
+          cursor: pointer;
           .icon {
             background: $space_blue;
           }

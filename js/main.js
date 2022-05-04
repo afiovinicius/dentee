@@ -12,7 +12,6 @@ btnMobile.addEventListener("touchstart", toggleMenu);
 
 // Nav Links Soft
 const softLinks = document.querySelectorAll(".js-nav li a");
-const scrollTop = document.querySelectorAll(".scroll_top");
 
 function scrollToSoft(event) {
   event.preventDefault();
@@ -20,15 +19,9 @@ function scrollToSoft(event) {
   const href = event.currentTarget.getAttribute("href");
   const section = document.querySelector(href);
   const initLink = section.offsetTop;
-  const initsTop = section.offsetTop;
 
   window.scrollTo({
-    top: initLink - 100,
-    behavior: "smooth",
-  });
-
-  window.scrollTo({
-    top: initsTop,
+    top: initLink - 20,
     behavior: "smooth",
   });
 }
@@ -37,9 +30,14 @@ softLinks.forEach((sLink) => {
   sLink.addEventListener("click", scrollToSoft);
 });
 
-scrollTop.forEach((sTop) => {
-  sTop.addEventListener("click", scrollToSoft);
-});
+// Button Scroll Top
+const scrollTop = document.getElementById("js-scroll-top"),
+  rootElement = document.documentElement;
+function scrollToTop(e) {
+  rootElement.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+scrollTop.addEventListener("click", scrollToTop);
 
 // Cards Specialties
 const hoverCard = document.querySelectorAll(".card_specialties");
