@@ -166,3 +166,82 @@
     }
   }
 }
+
+// 3 - About
+.about {
+  margin-top: 10rem;
+  .container {
+    @include flex(row, nowrap, center, space-between);
+    .b_clinic {
+      width: 100%;
+      max-width: 51.4rem;
+      height: 52.9rem;
+      border-radius: 0.8rem;
+      margin-left: 4rem;
+      position: relative;
+      background: url("../assets/clinica.png") no-repeat center/cover;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -4rem;
+        width: 100%;
+        max-width: 1.2rem;
+        height: 12.5rem;
+        background: url("../assets/squars.svg") no-repeat;
+      }
+    }
+    .b_text {
+      width: 100%;
+      max-width: 41rem;
+      margin-right: 4.5rem;
+      .t_body_sm {
+        color: $ocean_blue;
+        margin-bottom: 0.8rem;
+      }
+      .t_body_lg {
+        color: $dark_ocean;
+        margin-top: 1.6rem;
+      }
+      .b_solid {
+        max-width: 25.4rem;
+        margin-top: 3.2rem;
+      }
+    }
+  }
+  @include responsive(1024px) {
+    .container {
+      .b_clinic {
+        max-width: 34rem;
+        height: 56.5rem;
+        &::before {
+          max-width: 1.1rem;
+          height: 10.8rem;
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      .b_clinic {
+        margin: 0rem 4rem;
+      }
+      .b_text {
+        margin-right: 0;
+      }
+    }
+  }
+  @include responsive(720px) {
+    .container {
+      flex-direction: column-reverse;
+      .b_clinic {
+        max-width: 90%;
+        height: 36rem;
+        margin: 4rem 0rem 0rem 4rem;
+      }
+      .b_text {
+        max-width: 100%;
+      }
+    }
+  }
+}

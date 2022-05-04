@@ -3,14 +3,14 @@
 ScrollReveal().reveal(".ef-up", {
   origin: "bottom",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
 });
 
 ScrollReveal().reveal(".ef-i-up", {
   origin: "bottom",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
   interval: 300,
 });
@@ -18,14 +18,14 @@ ScrollReveal().reveal(".ef-i-up", {
 ScrollReveal().reveal(".ef-down", {
   origin: "top",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
 });
 
 ScrollReveal().reveal(".ef-i-down", {
   origin: "top",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
   interval: 300,
 });
@@ -35,14 +35,14 @@ ScrollReveal().reveal(".ef-i-down", {
 ScrollReveal().reveal(".ef-left", {
   origin: "left",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
 });
 
 ScrollReveal().reveal(".ef-i-left", {
   origin: "left",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
   interval: 300,
 });
@@ -50,14 +50,14 @@ ScrollReveal().reveal(".ef-i-left", {
 ScrollReveal().reveal(".ef-right", {
   origin: "right",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
 });
 
 ScrollReveal().reveal(".ef-i-right", {
   origin: "right",
   distance: "20px",
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
   interval: 300,
 });
@@ -68,13 +68,13 @@ ScrollReveal().reveal(".ef-zoom", {
   distance: "0px",
   scale: 0.85,
   opacity: 0.4,
-  duration: 1000,
+  duration: 1400,
   easing: "ease",
   interval: 300,
 });
 
 ScrollReveal().reveal(".ef-flip", {
-  duration: 2000,
+  duration: 1800,
   rotate: {
     x: 360,
     y: -180,
