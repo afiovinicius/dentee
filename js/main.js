@@ -1,3 +1,13 @@
+// header background
+let header = document.getElementById("s_bgOn");
+window.onscroll = function (evt) {
+  if (window.scrollY > 12) {
+    header.classList.add("bgOn");
+  } else {
+    header.classList.remove("bgOn");
+  }
+};
+
 // menu
 const btnMobile = document.getElementById("btn-mobile");
 
@@ -21,7 +31,7 @@ function scrollToSoft(event) {
   const initLink = section.offsetTop;
 
   window.scrollTo({
-    top: initLink - 20,
+    top: initLink - 100,
     behavior: "smooth",
   });
 }
