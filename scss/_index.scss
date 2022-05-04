@@ -138,3 +138,24 @@
     }
   }
 }
+
+// 2 - Specialties
+.specialties {
+  margin-top: 10rem;
+  .container {
+    @include flex(column, nowrap, center, center);
+    .s_title {
+      text-align: center;
+      .t_body_lg {
+        margin-top: 1.6rem;
+        color: $dark_ocean;
+        max-width: 42.5rem;
+      }
+    }
+    .s_cards {
+      gap: 2.4rem;
+      margin-top: 5.6rem;
+      @include flex(row, wrap, center, center);
+    }
+  }
+}

@@ -50,3 +50,22 @@ button:hover {
     transform: translateX(0.5rem);
   }
 }
+
+// Card Specialties
+.card_specialties {
+  background: $light_ocean;
+  border-radius: 0.8rem;
+  padding: 4rem;
+  width: 100%;
+  max-width: 36rem;
+  height: 26.6rem;
+  h4 {
+    margin: 1.6rem 0rem;
+  }
+  @include responsive(991px) {
+    max-width: 33.6rem;
+  }
+  @include responsive(600px) {
+    max-width: 100%;
+  }
+}
