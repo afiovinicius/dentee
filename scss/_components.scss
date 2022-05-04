@@ -59,10 +59,13 @@ button:hover {
   width: 100%;
   max-width: 36rem;
   height: 26.6rem;
+  transition: all 0.4s ease-in;
   h4 {
     margin: 1.6rem 0rem;
   }
   &.active {
+    cursor: pointer;
+    transition: all 0.4s ease-in;
     border: 1px solid $gray_400;
     box-shadow: 0px 4px 8px rgba(124, 133, 153, 0.16);
   }

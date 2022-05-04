@@ -9,3 +9,18 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
+
+// Cards Specialties
+const hoverCard = document.querySelectorAll(".card_specialties");
+
+hoverCard.forEach((hActive, index) => {
+  hActive.addEventListener("mouseover", (e) => {
+    e.preventDefault();
+
+    hoverCard.forEach((hActiveR) => {
+      hActiveR.classList.remove("active");
+    });
+
+    hActive.classList.toggle("active");
+  });
+});
