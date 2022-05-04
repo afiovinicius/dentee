@@ -238,6 +238,9 @@
         max-width: 90%;
         height: 36rem;
         margin: 4rem 0rem 0rem 4rem;
+        &::before {
+          height: 12.5rem;
+        }
       }
       .b_text {
         max-width: 100%;
