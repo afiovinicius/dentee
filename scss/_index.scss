@@ -248,3 +248,48 @@
     }
   }
 }
+
+// 4 - Information
+.information {
+  margin-top: 10rem;
+  .container {
+    @include flex(row, wrap, center, space-between);
+    gap: 2.4rem;
+  }
+}
+
+// 5 - Professional
+.professional {
+  margin-top: 10rem;
+  padding: 12.4rem 0rem;
+  background: $light_ocean;
+  .container {
+    .p_cards {
+      margin-top: 5.6rem;
+      gap: 13.4rem;
+      @include flex(row, wrap, center, space-between);
+    }
+  }
+  @include responsive(1024px) {
+    .container {
+      .p_cards {
+        gap: 13.4rem 7.4rem;
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      .p_cards {
+        gap: 8rem;
+      }
+    }
+  }
+  @include responsive(740px) {
+    .container {
+      .p_cards {
+        gap: 2.4rem;
+        justify-content: center;
+      }
+    }
+  }
+}
