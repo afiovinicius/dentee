@@ -2,7 +2,7 @@ header {
   width: 100%;
   padding: 3.4rem 0rem;
   background: $light_ocean;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear;
   border-bottom: 0.1rem solid $gray_200;
   .container {
     height: 8.5rem;
