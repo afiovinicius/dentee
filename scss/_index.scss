@@ -130,4 +130,11 @@
       }
     }
   }
+  @include responsive(375px) {
+    .container {
+      .i_girl {
+        height: 40rem;
+      }
+    }
+  }
 }
