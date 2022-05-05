@@ -30,8 +30,24 @@
           left: -2.4rem;
           width: 1.2rem;
           height: 1.2rem;
-          background: #0fe917;
+          background: rgba(15, 233, 22, 1);
           border-radius: 50%;
+          animation: cpulse 1s linear infinite;
+          // animation
+          @keyframes cpulse {
+            0% {
+              box-shadow: 0 0 0 2px rgba(15, 233, 22, 0.2);
+              transform: scale(0.9);
+            }
+            50% {
+              box-shadow: 0 0 0 4px rgba(15, 233, 22, 0.4);
+              transform: scale(0.9);
+            }
+            100% {
+              box-shadow: 0 0 0 6px rgba(15, 233, 22, 0.6);
+              transform: scale(0.9);
+            }
+          }
         }
       }
       h1 {
