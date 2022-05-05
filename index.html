@@ -491,7 +491,106 @@
     </section>
 
     <section class="contact">
-      <div class="container"></div>
+      <div class="container">
+        <div class="c_infor ef-i-left">
+          <div class="c_text">
+            <p class="t_body_xs">Contato</p>
+            <h2>Agende uma consulta</h2>
+            <p class="t_body_md">
+              Atenderemos a sua solicitação em poucos minutos, pode nos enviar
+              uma mensagem através do Whatsapp ou preencha o formulário.<br /><br />
+              Também é possível nos contactar através dos números de telemóvel
+              abaixo.
+            </p>
+            <a href="#" class="btn b_outline">
+              <img
+                src="./assets/icons/icon_whatsapp.svg"
+                alt="icone whatsapp"
+                class="icon i-sm"
+                loading="lazy"
+              />
+              Atendimento por Whatsapp
+            </a>
+          </div>
+          <div class="c_n_phones">
+            <h3>Telemóveis</h3>
+            <div class="c_phones">
+              <div class="contact_infor">
+                <img
+                  class="icon i-sm"
+                  src="./assets/icons/icon_phone_brand.svg"
+                  alt="icone telefone"
+                  loading="lazy"
+                />
+                <p class="t_body_md">+351 966 123 456</p>
+              </div>
+              <div class="contact_infor">
+                <img
+                  class="icon i-sm"
+                  src="./assets/icons/icon_phone_brand.svg"
+                  alt="icone telefone"
+                  loading="lazy"
+                />
+                <p class="t_body_md">+351 966 567 890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="ef-zoom">
+          <div class="form">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              required
+              placeholder="Insira o seu nome completo"
+            />
+          </div>
+          <div class="form">
+            <label for="email">E-Mail</label>
+            <input
+              type="email"
+              required
+              placeholder="Insira o seu endereço de e-mail"
+            />
+          </div>
+          <div class="form">
+            <label for="list">Especialidade</label>
+            <input
+              class="list_spt"
+              list="list"
+              required
+              placeholder="Selecionar especialidade"
+            />
+            <datalist id="list">
+              <option value="Clínico Geral"></option>
+              <option value="Ortodontia"></option>
+              <option value="Odontopediatria"></option>
+              <option value="Estética"></option>
+              <option value="Implantologia"></option>
+              <option value="Endodontia"></option>
+            </datalist>
+          </div>
+          <div class="form">
+            <label for="msg">Mensagem</label>
+            <textarea
+              name="msg"
+              id="msg"
+              cols="6"
+              rows="6"
+              placeholder="Escreva a sua mensagem"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn b_submit b_solid">
+            Enviar mensagem
+            <img
+              src="./assets/icons/icon_arrow_right.svg"
+              alt="icone seta"
+              class="icon i-sm"
+              loading="lazy"
+            />
+          </button>
+        </form>
+      </div>
     </section>
 
     <footer>

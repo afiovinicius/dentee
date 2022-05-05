@@ -44,10 +44,13 @@
   }
 }
 
-.b_submit:hover {
-  img {
-    transition: 0.4s ease-out;
-    transform: translateX(0.5rem);
+.b_submit {
+  width: 100%;
+  &:hover {
+    img {
+      transition: 0.4s ease-out;
+      transform: translateX(0.5rem);
+    }
   }
 }
 

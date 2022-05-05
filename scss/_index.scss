@@ -411,3 +411,69 @@
     }
   }
 }
+
+// 7 - Contact
+.contact {
+  margin-top: 10rem;
+  .container {
+    @include flex(row, nowrap, center, space-between);
+    .c_infor {
+      width: 100%;
+      max-width: 42rem;
+      .c_text {
+        padding-bottom: 4.8rem;
+        border-bottom: 0.1rem solid $gray_200;
+        .t_body_xs {
+          color: $ocean_blue;
+          margin-bottom: 0.8rem;
+        }
+        .t_body_md {
+          color: $dark_ocean;
+          margin: 1.6rem 0rem 3.2rem 0rem;
+        }
+        .b_outline {
+          max-width: 30rem;
+        }
+      }
+      .c_n_phones {
+        margin-top: 4.8rem;
+        .c_phones {
+          margin-top: 1.6rem;
+          @include flex(row, wrap, center, flex-start);
+          gap: 1.6rem;
+        }
+      }
+    }
+    form {
+      width: 100%;
+      max-width: 61.6rem;
+      padding: 8rem;
+      background: $light_ocean;
+      border-radius: 0.8rem;
+      .form {
+        margin-bottom: 1.6rem;
+        input,
+        textarea {
+          margin-top: 0.6rem;
+        }
+      }
+    }
+  }
+  @include responsive(1024px) {
+    .container {
+      form {
+        padding: 4rem;
+        margin-left: 3.2rem;
+      }
+    }
+  }
+  @include responsive(740px) {
+    .container {
+      flex-direction: column;
+      form {
+        padding: 3.2rem 2.4rem;
+        margin: 6.4rem 0rem 0rem 0rem;
+      }
+    }
+  }
+}
