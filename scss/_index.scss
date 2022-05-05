@@ -120,7 +120,7 @@
       flex-wrap: wrap;
       justify-content: center;
       .h_text {
-        margin-bottom: 5.6rem;
+        margin-bottom: 8rem;
         h1 {
           width: 100%;
         }
@@ -140,7 +140,7 @@
   }
 
   @include responsive(480px) {
-    padding-top: 3.2rem;
+    padding-top: 3.4rem;
     .container {
       .i_girl {
         margin-top: 3.2rem;
@@ -148,7 +148,7 @@
       }
     }
   }
-  @include responsive(376px) {
+  @include responsive(360px) {
     .container {
       .i_girl {
         height: 40rem;
