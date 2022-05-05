@@ -63,3 +63,29 @@ hoverCard.forEach((hActive, index) => {
     hActive.classList.toggle("active");
   });
 });
+
+// Slide Depoiment
+var swiper = new Swiper(".dSlide", {
+  slidesPerView: 2,
+  spaceBetween: 24,
+  cssMode: true,
+  navigation: {
+    nextEl: ".dSlide .swiper-button-next",
+    prevEl: ".dSlide .swiper-button-prev",
+  },
+  pagination: {
+    el: ".dSlide .swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 24,
+    },
+    991: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+  },
+});

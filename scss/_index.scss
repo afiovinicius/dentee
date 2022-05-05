@@ -299,3 +299,99 @@
 }
 
 // 6 - Depoiment
+.depoiment {
+  margin-top: 10rem;
+  .container {
+    text-align: center;
+    h2 {
+      margin-bottom: 5.6rem;
+    }
+    .swiper {
+      height: 45.9rem;
+      @include flex(column, nowrap, flex-end, space-between);
+      .swiper-wrapper {
+        height: 35.8rem;
+        .swiper-slide {
+          max-width: 50.4rem;
+        }
+      }
+      .nav_slide {
+        width: 100%;
+        height: 4.5rem;
+        margin-bottom: 0.2rem;
+        position: relative;
+        @include flex(row-reverse, nowrap, center, space-between);
+        .n_arrows {
+          display: flex;
+          width: 10rem;
+          height: 4.5rem;
+          position: relative;
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 4.5rem;
+            height: 4.5rem;
+            border: 0.1rem solid $ocean_blue;
+            border-radius: 0.8rem;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            pointer-events: all;
+            &::after {
+              color: transparent;
+            }
+            &.swiper-button-disabled {
+              opacity: 0.2;
+            }
+          }
+          .swiper-button-next {
+            right: 0 !important;
+            &::after {
+              background: url("../assets/icons/icon_arrow_right_brand.svg")
+                no-repeat center;
+            }
+          }
+          .swiper-button-prev {
+            left: 0 !important;
+            &::after {
+              background: url("../assets/icons/icon_arrow_left_brand.svg")
+                no-repeat center;
+            }
+          }
+        }
+        .swiper-pagination {
+          width: 20rem;
+          bottom: auto;
+          left: 50%;
+          transform: translate(-50%);
+          text-align: left;
+          .swiper-pagination-bullet {
+            margin: 0;
+            width: 1.5rem;
+            height: 0.6rem;
+            opacity: 1;
+            background: $light_space;
+            border-radius: 0.8rem;
+            transition: all 0.4s ease-in-out;
+            &:not(:last-child) {
+              margin-right: 0.6rem;
+            }
+            &-active {
+              width: 3.6rem;
+              height: 0.6rem;
+              border-radius: 0.8rem;
+              background: $ocean_blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      .swiper .nav_slide .swiper-pagination {
+        position: relative;
+        left: auto;
+        transform: none;
+      }
+    }
+  }
+}

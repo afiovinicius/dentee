@@ -149,6 +149,41 @@
   }
 }
 
+// Card Depoiment
+.card_depoiment {
+  width: 100%;
+  max-width: 50.4rem;
+  height: 100%;
+  max-height: 35.8rem;
+  padding: 4rem;
+  background: $light_ocean;
+  border-radius: 0.8rem;
+  @include flex(column, nowrap, flex-start, center);
+  row-gap: 3.2rem;
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .t_body_md {
+    color: $dark_ocean;
+    text-align: left;
+  }
+  .d_person {
+    @include flex(row, nowrap, center, center);
+    column-gap: 2.2rem;
+    .d_photo {
+      width: 7rem;
+      height: 7rem;
+    }
+    .d_name {
+      text-align: left;
+      .t_body_sm {
+        color: $ocean_blue;
+      }
+    }
+  }
+}
+
 // Contact Infor
 .contact_infor {
   display: flex;
