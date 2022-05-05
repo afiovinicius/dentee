@@ -140,8 +140,10 @@
   }
 
   @include responsive(480px) {
+    padding-top: 3.2rem;
     .container {
       .i_girl {
+        margin-top: 3.2rem;
         height: 46rem;
       }
     }
