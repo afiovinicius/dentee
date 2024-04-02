@@ -1,4 +1,4 @@
-# Case - Dentee
+# Dentee
 
 ---
 
